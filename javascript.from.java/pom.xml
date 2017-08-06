@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>neuland.examples</groupId>
+		<artifactId>javascript</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>javascript.from.java</artifactId>
+	<name>javascript from java</name>
+	<description>div. Beispiele, wie javascript von java aufgerufen wird</description>
+
+	<properties>
+		<!-- for maven-jar-plugin (build pase) -->
+		<maven.jar.mainclass>neuland.examples.javascript.Main</maven.jar.mainclass>
+		<maven.jar.manifest.classpath.add>true</maven.jar.manifest.classpath.add>
+		<maven.jar.final.name>javascriptFromJava.jar</maven.jar.final.name>
+		<!-- for maven-jar-plugin -->
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>neuland.examples.javascript.Main</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -13,5 +13,6 @@
 
 	<modules>
 		<module>javascript.in.a.war</module>
+		<module>javascript.from.java</module>
 	</modules>
 </project>
