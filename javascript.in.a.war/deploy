@@ -1,0 +1,1 @@
+cp target/fun.war /ENDev/wildfly-10/standalone/deployments/
