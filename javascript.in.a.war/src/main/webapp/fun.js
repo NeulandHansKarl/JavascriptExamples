@@ -15,9 +15,9 @@ class Fun {
 	this.outputtext.textContent="doedel";
 	
 	this.inputtext.onchange= e=> // console.log(e);
-							this.keyup(e);
+							this.update(e);
 }	
-	keyup(e){
+	update(e){
 		console.log(e);
 
 		fetch("/fun/resources/fun").then(response => 
